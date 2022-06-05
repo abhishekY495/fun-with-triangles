@@ -27,3 +27,7 @@ a {
 .nav-heading {
     font-family: 'Megrim', sans-serif;
 }
+
+.social-icons {
+    width: 2rem;
+}
