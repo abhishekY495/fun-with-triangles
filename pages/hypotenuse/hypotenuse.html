@@ -13,26 +13,29 @@
     <nav class="nav-bar">
         <h1><a href="../../index.html" class="nav-heading">Fun with Triangles</a></h1>
         <div class="nav-links">
-            <a class="link link-active" href="../../index.html">Is Triangle?</a>
+            <a class="link" href="../../index.html">Is Triangle?</a>
             <a class="link" href="../quiz/quiz.html">Quiz</a>
-            <a class="link" href="../hypotenuse/hypotenuse.html">Hypotenuse</a>
+            <a class="link link-active" href="../hypotenuse/hypotenuse.html">Hypotenuse</a>
             <a class="link" href="../area-triangle/area-triangle.html">Area of Triangle</a>
         </div>
     </nav>
 
     <main>
-        <h1>Calculate Hypotenuse of a triangle</h1>
-        <p>Hypotenuse formula - <span>√(base² + height²)</span></p>
-        <div class="base-a">
-            <label for="base-value-a">Enter base value (a)</label>
+        <h1 class="heading">Calculate Hypotenuse of a triangle</h1>
+        <p class="formula">Hypotenuse formula = <span>sqrt(a² + b²)</span></p>
+        <div class="divider"></div>
+        <div class="input-container base-a">
+            <label for="base-value-a">Enter value of <span>a</span></label>
             <input id="base-value-a" type="number">
         </div>
-        <div class="base-b">
-            <label for="base-value-b">Enter base value (b)</label>
+        <div class="input-container base-b">
+            <label for="base-value-b">Enter value of <span>b</span></label>
             <input id="base-value-b" type="number">
         </div>
 
-        <button class="calulate-btn">Calculate</button>
+        <button class="calculate-btn">Calculate</button>
+
+        <div class="divider"></div>
 
         <p id="output-message"></p>
     </main>

@@ -13,26 +13,29 @@
     <nav class="nav-bar">
         <h1><a href="../../index.html" class="nav-heading">Fun with Triangles</a></h1>
         <div class="nav-links">
-            <a class="link link-active" href="../../index.html">Is Triangle?</a>
+            <a class="link" href="../../index.html">Is Triangle?</a>
             <a class="link" href="../quiz/quiz.html">Quiz</a>
             <a class="link" href="../hypotenuse/hypotenuse.html">Hypotenuse</a>
-            <a class="link" href="../area-triangle/area-triangle.html">Area of Triangle</a>
+            <a class="link link-active" href="../area-triangle/area-triangle.html">Area of Triangle</a>
         </div>
     </nav>
 
     <main>
-        <h1>Calculate Area of a triangle</h1>
-        <p>Area of a triangle - <span>1/2(Base * Height)</span></p>
-        <div class="base">
+        <h1 class="heading">Calculate Area of a triangle</h1>
+        <p class="formula">Area of a triangle = <span>1/2(Base * Height)</span></p>
+        <div class="divider"></div>
+        <div class="input-container base">
             <label for="base-value">Enter base</label>
             <input id="base-value" type="number">
         </div>
-        <div class="height">
+        <div class="input-container height">
             <label for="height-value">Enter height</label>
             <input id="height-value" type="number">
         </div>
 
-        <button class="calulate-btn">Calculate</button>
+        <button class="calculate-btn">Calculate</button>
+
+        <div class="divider"></div>
 
         <p id="output-message"></p>
     </main>
