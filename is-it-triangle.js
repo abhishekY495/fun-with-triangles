@@ -1,7 +1,7 @@
 const angles = document.querySelectorAll('.angles');
 const checkBtn = document.querySelector('.check-btn');
 
-const message = document.querySelector('.message');
+const message = document.querySelector('#output-message');
 const gif = document.querySelector('.gif');
 
 gif.style.display = "none";
@@ -14,13 +14,13 @@ function checkTriangle() {
 
     if (angles[0].value && angles[1].value && angles[2].value) {
         if (sum === 180) {
-            message.innerText = 'Yes, Its a Triangle.';
+            message.innerHTML = 'Yes, Its a <span>Triangle</span>';
             message.style.display = "block";
-            gif.src = './Images/triangle.webp';
+            gif.src = './Images/triangle.gif';
             gif.alt = 'Glowing triangle';
             gif.style.display = "block";
         } else {
-            message.innerText = 'No, Its Not a Triangle.';
+            message.innerHTML = 'No, Its <span>Not a Triangle</span>';
             message.style.display = "block";
             gif.src = './Images/not-triangle.gif';
             gif.alt = 'Weird shape morphing';

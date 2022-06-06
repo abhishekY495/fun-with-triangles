@@ -1,6 +1,6 @@
 const form = document.querySelector('.quiz-form');
 const submitBtn = document.querySelector('#submit-btn');
-const output = document.querySelector('#output-message');
+const output = document.querySelector('.quiz-score');
 
 const correctAnswers = ['90°', 'Right Angle', '12, 16, 20', 'Equilateral triangle', '100°', '30°', 'a + b + c', '45°'];
 
@@ -18,5 +18,5 @@ function calculateScore() {
         index++;
     }
     
-    output.innerText = `Your Score is ${score}/8`
+    output.innerHTML = `Your Score is <span>${score}</span>/8`
 }
