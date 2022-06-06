@@ -2,20 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 :root {
-    --primary-color: #662193;
-    --secondary-color: #b360eb;
-    --off-dark: #3e3e3e;
+    --primary-color: #483efe;
+    --secondary-color: #0a00d2;
+    --off-white: #e6e6e6;
+    --dark-gray: #2b2b2b;
 }
-
-
 body {
     background-color: black;
     color: white;
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    display: flex; 
+    flex-direction: column;
+    height: 100vh;
 }
-h1 {
+h1,p {
     margin: 0;
     padding: 0;
 }
@@ -24,10 +26,153 @@ a {
     text-decoration: none;
 }
 
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    background-color: var(--primary-color);
+}
 .nav-heading {
+    font-size: 2rem;
     font-family: 'Megrim', sans-serif;
+    margin: 0;
+}
+.nav-links {
+    padding-left: 2rem;
+}
+.nav-links .link {
+    font-size: 1.3rem;
+    padding: 0.3rem 0.6rem;
+}
+.link-active {
+    background-color: var(--secondary-color);
+    border-radius: 0.5rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.heading {
+    margin: 0.8rem 0 0 0;
+    font-size: 2.2rem;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-container label {
+    font-size: 1.5rem;
+    margin: 0 0 0.3rem 0;
+}
+.input-container input {
+    font-size: 1.3rem;
+    padding: 0.2rem 0.5rem;
+    margin: 0 0 0.6rem 0;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px var(--primary-color)
+}
+
+.check-btn, .calculate-btn {
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.4rem 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0 0 0;
+    box-shadow: 3px 3px var(--primary-color);
+}
+.check-btn:active, .calculate-btn:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.divider {
+    width: 50%;
+    padding: 1.5px;
+    margin: 0 auto ;
+    background-color: rgba(255, 255, 255, 0.183);
+    border: none;
+    margin: 0.8rem 0 0.5rem 0;
+}
+
+#output-message {
+    font-size: 1.3rem;
+    margin: 0 0 0.3rem 0;
+}
+span {
+    font-weight: 500;
+}
+.gif {
+    width: 8rem;
+}
+
+.formula {
+    font-size: 1.3rem;
+    padding: 0.4rem 0.8rem;
+    margin: 0.5rem 0 1rem 0;
+    border: 0.3rem solid var(--secondary-color);
+}
+
+footer {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    padding: 0.2rem;
+    gap: 1.5rem;
+    margin-top: auto;
 }
 
 .social-icons {
-    width: 2rem;
+    width: 1.5rem;
+    margin-top: 0.3rem;
+}
+
+/* quiz-form */
+.quiz-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+}
+.question-container {
+    padding: 1rem 1rem 1rem 1.5rem;
+    border-radius: 0.5rem;
+}
+.question-container:nth-child(even) {
+    background-color: var(--dark-gray);
+}
+.question {
+    margin: 0 0 0.5rem 0;
+}
+.question-container label {
+    margin: 0 0.6rem 0 0;
+}
+
+#submit-btn {
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.4rem 1.5rem;
+    font-weight: 600;
+    margin: 1.5rem 0;
+    box-shadow: 3px 3px var(--primary-color);
+}
+#submit-btn:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.quiz-score {
+    font-size: 1.3rem;
+    margin: 0 0 1rem 0;
 }
