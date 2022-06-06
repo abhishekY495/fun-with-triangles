@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 :root {
-    --primary-color: #483efe;
-    --secondary-color: #0a00d2;
+    --primary-color: #574ef7;
+    --secondary-color: #2e25d6;
     --off-white: #e6e6e6;
     --dark-gray: #2b2b2b;
 }
@@ -16,6 +16,7 @@ body {
     display: flex; 
     flex-direction: column;
     height: 100vh;
+    text-align: center;
 }
 h1,p {
     margin: 0;
@@ -103,6 +104,14 @@ main {
     border: none;
     margin: 0.8rem 0 0.5rem 0;
 }
+.title-divider {
+    display: none;
+    width: 60%;
+    margin: 0.2rem 0 0.5rem 0;
+    padding: 1.5px;
+    background-color: rgba(0, 0, 0, 0.562);
+    border: none;
+}
 
 #output-message {
     font-size: 1.3rem;
@@ -113,13 +122,14 @@ span {
 }
 .gif {
     width: 8rem;
+    margin: 0 0 0.8rem 0;
 }
 
 .formula {
     font-size: 1.3rem;
-    padding: 0.4rem 0.8rem;
+    padding: 0.3rem 1rem;
     margin: 0.5rem 0 1rem 0;
-    border: 0.3rem solid var(--secondary-color);
+    border: 0.2rem solid var(--secondary-color);
 }
 
 footer {
@@ -175,4 +185,89 @@ footer {
 .quiz-score {
     font-size: 1.3rem;
     margin: 0 0 1rem 0;
+}
+
+
+@media (max-width:960px) {
+    .nav-bar {
+        padding: 1rem;
+    }
+}
+
+@media (max-width:890px) {
+    .nav-bar {
+        padding: 0.5rem;
+        flex-direction: column;
+    }
+    .nav-bar h1 {
+        text-align: center;
+    }
+    .nav-links {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 1.7rem;
+    }
+    .title-divider {
+        display: block;
+    }
+}
+
+@media (max-width:663px) {
+    .heading {
+        font-size: 1.8rem;
+    }
+    .nav-links {
+        gap: 0.5rem;
+    }
+    .nav-links .link {
+        font-size: 1.1rem;
+    }
+    .heading {
+        margin-top: 0.5rem;
+        font-size: 1.6rem;
+    }
+    .input-container label {
+        font-size: 1.3rem;
+    }
+    .input-container input {
+        font-size: 1.1rem;
+    }
+    .check-btn, .calculate-btn {
+        font-size: 1.1rem;
+    }
+    #output-message {
+        font-size: 1.2rem;
+    }
+    .formula {
+        font-size: 1.2rem;
+        padding: 0.2rem 1rem;
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width:500px) {
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.2rem;
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+    }
+    .nav-links .link {
+        padding: 0.2rem 0.5rem;
+    }
+    .link-active {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@media (max-width:429px) {
+    .formula {
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+        margin: 0.3rem;
+    }
 }
