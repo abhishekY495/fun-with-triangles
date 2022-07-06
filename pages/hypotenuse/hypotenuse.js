@@ -11,9 +11,13 @@ function calculateHypotenuse() {
     const b = Number(valueB.value);
 
     if (a && b) {
-        const hypotenuse = Math.sqrt(a**2 + b**2);
-        output.innerHTML = `The hypotenuse is <span>${hypotenuse}</span>`;
+        if (a>0 && b>0) {
+            const hypotenuse = Math.sqrt(a**2 + b**2);
+            output.innerHTML = `The hypotenuse is <span>${hypotenuse}</span>`;
+        } else {
+            output.innerHTML = 'Cannot be negative';
+        }
     } else {
-        output.innerHTML = 'Enter both fields.';
+        output.innerHTML = 'Enter both fields';
     }
 }
