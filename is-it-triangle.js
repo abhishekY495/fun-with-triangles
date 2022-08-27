@@ -12,13 +12,24 @@ message.style.display = "none";
 checkBtn.addEventListener('click', checkTriangle);
 
 function checkTriangle() {
-    const sum = sumOfAngels(angles[0].value, angles[1].value, angles[2].value);
+    const angle1 = angles[0].value;
+    const angle2 = angles[1].value;
+    const angle3 = angles[2].value;
 
-    if (angles[0].value && angles[1].value && angles[2].value) {
-        if (sum === 180) {
-            triangleMsgOutput();
+    const sum = sumOfAngels(angle1, angle2, angle3);
+
+    if (angle1 && angle2 && angle3) {
+        if (angle1>0 && angle2>0 && angle3>0) {
+            if (sum === 180) {
+                triangleMsgOutput();
+            } else {
+                notTriangleMsgOutput();
+            }            
         } else {
-            notTriangleMsgOutput();
+            message.innerText = 'Cannot be negative.';
+            message.style.display = "block";
+            triangleGif.style.display = "none";
+            notTriangleGif.style.display = "none";
         }
     } else {
         message.innerText = 'Enter all fields.';
@@ -34,14 +45,14 @@ function sumOfAngels(angle1, angle2, angle3) {
 }
 
 function triangleMsgOutput() {
-    message.innerHTML = 'Yes, Its a <span>Triangle</span>';
+    message.innerHTML = 'Its a <span>Triangle</span>';
     message.style.display = "block";
     notTriangleGif.style.display = "none";
     triangleGif.style.display = "block";
 }
 
 function notTriangleMsgOutput() {
-    message.innerHTML = 'No, Its <span>Not a Triangle</span>';
+    message.innerHTML = 'Its <span>Not a Triangle</span>';
     message.style.display = "block";
     triangleGif.style.display = "none";
     notTriangleGif.style.display = "block";
