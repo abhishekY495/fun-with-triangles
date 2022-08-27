@@ -1,5 +1,5 @@
-const base = document.querySelector('#base-value');
-const height = document.querySelector('#height-value');
+const baseInput = document.querySelector('#base-input');
+const heightInput = document.querySelector('#height-input');
 
 const calculateBtn = document.querySelector('.calculate-btn');
 const output = document.querySelector('#output-message');
@@ -7,10 +7,17 @@ const output = document.querySelector('#output-message');
 calculateBtn.addEventListener('click', calculateArea);
 
 function calculateArea() {
-    if (base.value && height.value) {
-        const area = (base.value * height.value) / 2;
-        output.innerHTML = `The area is <span>${area}</span> cm²`;
+    const base = baseInput.value;
+    const height = heightInput.value;
+
+    if (base && height) {
+        if (base>0 && height>0) {
+            const area = (base * height) / 2;
+            output.innerHTML = `The area is <span>${area}</span> cm²`;
+        } else {
+            output.innerText = 'Cannot be Negative'
+        }
     } else {
-        output.innerHTML = 'Enter both fields.';
+        output.innerText = 'Enter both fields.';
     }
 }
